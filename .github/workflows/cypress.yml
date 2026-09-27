@@ -30,8 +30,8 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npm run dev
-          wait-on: 'http://localhost:5173'
-          wait-on-timeout: 60
+          wait-on: 'http://127.0.0.1:5173, http://127.0.0.1:3001/health'
+          wait-on-timeout: 120
           browser: chrome
 
       - name: Upload Screenshots on Failure
